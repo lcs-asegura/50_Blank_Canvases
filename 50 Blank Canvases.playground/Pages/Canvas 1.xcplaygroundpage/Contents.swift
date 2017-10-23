@@ -13,19 +13,30 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 500, height: 500)
 
-/*:
- ## Add your code below
- 
- Be sure to write human-readable code.
- 
- Use whitespace and comments as appropriate.
- */
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+//make 0,0 in centre
+canvas.translate(byX: 250, byY: 250)
+
+//fill
+canvas.drawShapesWithFill = false
 
 
+//loop to set horizontal position
+for x in stride(from: 0, to: 250, by: 100) {
+    
+    //loop to set verical posistion
+    
+    for y in stride(from: 200, to: -200, by: -100) {
+        
+        
+        //draw five squares
+        
+        for size in stride(from: 100, to: -20, by: -18){
+            
+            canvas.drawRectangle(centreX: x, centreY: y, width: size, height: size)
 
+            //rotate the squares
 /*:
  ## Use source control
  To keep your work organized, and receive feedback, source control is a must.
@@ -48,3 +59,6 @@ let canvas = Canvas(width: 400, height: 300)
 PlaygroundPage.current.liveView = canvas.imageView
 
 
+}
+}
+}
