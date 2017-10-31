@@ -13,7 +13,56 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 1000, height: 1000)
+
+//canvas color
+canvas.fillColor = Color.black
+
+canvas.drawRectangle(centreX: 0, centreY: 0, width: 5000, height: 5000)
+
+//translate origin
+canvas.translate(byX: 500, byY: 500 )
+
+//show axes
+canvas.drawAxes()
+
+//drawshapeswithboarders
+canvas.drawShapesWithBorders=false
+
+//start ghost
+canvas.fillColor = Color.white
+
+canvas.drawEllipse(centreX: 0, centreY: 250, width: 200, height: 300)
+
+//ghost mouth
+canvas.fillColor = Color.black
+
+canvas.drawEllipse(centreX: 0, centreY: 250, width: 19, height: 19, borderWidth: 0)
+
+//eyes
+canvas.fillColor = Color.black
+
+canvas.drawEllipse(centreX: -50, centreY: 325, width: 27, height: 27, borderWidth: 0)
+
+canvas.drawEllipse(centreX: 45, centreY: 325, width: 39, height: 39)
+
+//bottom of ghost
+
+canvas.fillColor = Color.black
+
+canvas.drawRectangle(centreX: 0, centreY: 137, width: 1000, height: 75)
+
+//curves
+
+canvas.fillColor = Color.white
+
+canvas.drawEllipse(centreX: -52, centreY: 175, width: 75, height: 85, borderWidth: 0)
+
+canvas.drawEllipse(centreX: 49, centreY: 175, width: 75, height: 85, borderWidth: 0)
+
+canvas.drawEllipse(centreX: 0, centreY: 200, width: 75, height: 85, borderWidth: 0)
+
+//white pupil
 
 /*:
  ## Add your code below
